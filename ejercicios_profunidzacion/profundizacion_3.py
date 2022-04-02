@@ -49,10 +49,34 @@ cantidad_ausentes = 0   # Aquí debe contar cuantos ausentes hubo
 # Realice aquí el bucle para recorrer todas las notas
 # y cacular la sumatoria
 
+for i in range(len(notas)):
+    if notas[i] >= 0:
+        cantidad_notas += 1
+        sumatoria += notas[i]
+    else:
+        cantidad_ausentes +=1
+
+# Al terminar el bucle calcular el promedio como:
 # Terminado el bucle calcule el promedio como
 # promedio = sumatoria / cantidad_notas
+print('La cantida de presentes es =', cantidad_notas)
+print('La sumatoria de las notas es =', sumatoria)
+
+promedio = sumatoria / cantidad_notas
+print('El promedio es = ', promedio)
 
 # Utilice la nota promedio calculada y transformela
 # a calificación con letras, imprima en pantalla el resultado
+if promedio >= 90:
+    print('La calificación es A')
+elif promedio < 90 and promedio >= 80:
+    print('La calificación es B')
+elif promedio < 80 and promedio >= 70:
+    print('La calificación es C')
+elif promedio < 70 and promedio >= 60:
+    print('La calificación es D')
+else :
+    print('La calificación es F')
 
 # Imprima en pantalla al cantidad de ausentes
+print('La cantidad de ausentes fue de =', cantidad_ausentes)

@@ -35,3 +35,32 @@ alguno de lo soportados o no es la palabra "FIN".
 
 print("Mi Calculadora (^_^)")
 # Empezar aquí la resolución del ejercicio
+
+while True:
+    numero_1 = int(input('Ingrese el primer nº a operar\n'))
+    numero_2 = int(input('Ingrese el último nº a operar\n'))
+
+    opcion = input('Indique la opción deseada: \n\
+    - Suma (+)\n\
+    - Resta (-)\n\
+    - Multiplicación (*)\n\
+    - División (/)\n\
+    - Exponente/Potencia (**)\n\
+    - Cerrar calculadora (fin)\n\
+    Aquí: '
+    )
+
+    if opcion == '+':
+        print('La suma entre', numero_1, 'y', numero_2, 'es', numero_1+numero_2)
+    elif opcion == '-':
+        print('La resta entre', numero_1, 'y', numero_2, 'es', numero_1-numero_2)
+    elif opcion == '*':
+        print('La multiplicación entre', numero_1, 'y', numero_2, 'es', numero_1*numero_2)
+    elif opcion == '/':
+        print('La división entre', numero_1, 'y', numero_2, 'es', float(numero_1/numero_2))
+    elif opcion == '**':
+        print('El exponente entre' , numero_1, 'y', numero_2, 'es', numero_1**numero_2)
+    elif opcion == 'fin':
+        break
+    else:
+        print('La opción seleccionada no es correcta')

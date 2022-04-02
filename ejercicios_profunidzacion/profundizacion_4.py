@@ -51,18 +51,37 @@ temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la
 
 # Colocar el bucle aqui......
 
+for i in range(len(temp_dataloger)):
+    temperatura_len += 1
+    temperatura_sumatoria += temp_dataloger[i]
+
+    if (temperatura_max is None) or (temp_dataloger[i] > temperatura_max):
+        temperatura_max = temp_dataloger[i]
+    if (temperatura_min is None) or (temp_dataloger[i] < temperatura_min):
+       temperatura_min = temp_dataloger[i]
+
+print('La máxima temp fue = ', temperatura_max)
+print('La menor temp fue = ', temperatura_min)
+print('La cantidad de temp relevadas fue de = ', temperatura_len)
+print('La suma de todas las temp fue de = ', round(temperatura_sumatoria, 2))
+
+# Al finalizar el bucle debe calcular el promedio como:
+temperatura_promedio = temperatura_sumatoria / temperatura_len
+print('La temp promedio fue = ', round(temperatura_promedio, 2))
+
 # Al finalizar el bucle compare si el valor que usted calculó para
 # temperatura_max y temperatura_min coincide con el que podría calcular
 # usando la función "max" y la función "min" de python
 # función "max" --> https://www.w3schools.com/python/ref_func_max.asp
 # función "min" --> https://www.w3schools.com/python/ref_func_min.asp
-
-# Al finalizar el bucle debe calcular el promedio como:
-# temperatura_promedio = temperatura_sumatoria / cantidad_temperatuas
-
 # Corroboren los resultados de temperatura_sumatoria
 # usando la función "sum"
 # función "sum" --> https://www.w3schools.com/python/ref_func_sum.asp
+
+print('La temperatura máxima con función es = ', max(temp_dataloger))
+print('La temperatura mínima con función es = ', min(temp_dataloger))
+print('La suma de las temperaturas con función da = ', round(sum(temp_dataloger), 2))
+
 
 '''
 Una vez que tengamos nuestros valores correctamente calculados debemos
@@ -83,3 +102,12 @@ https://es.weatherspark.com/y/28981/Clima-promedio-en-Buenos-Aires-Argentina-dur
 # ¿En qué época del año nos encontramos?
 # Imprima el resultado en pantalla
 # Debe utilizar temperatura_max y temperatura_min para definirlo
+
+if (temperatura_min >= 19) and (temperatura_max <= 28):
+    print('La temporada del muestreo fue VERANO')
+elif (temperatura_min >= 11) and (temperatura_max <= 20):
+    print('La temporada del muestreo fue OTOÑO')
+elif (temperatura_min >= 8) and (temperatura_max <= 14):
+    print('La temporada del muestreo fue INVIERNO')
+elif (temperatura_min >= 10) and (temperatura_max <= 24):
+    print('La temporada del muestreo fue PRIMAVERA')
