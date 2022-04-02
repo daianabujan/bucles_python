@@ -13,6 +13,10 @@
 # para imprimir en pantalla todos los colores
 colores = ['rojo', 'naranja', 'verde', 'azul']
 
+for lista_colores in colores:
+    print('El color es =', lista_colores) 
+
+
 # Itere el "for" utilizando la lista como parámero
 # y utilizar como elemento del "for" cada color
 # for color ...
@@ -21,5 +25,8 @@ colores = ['rojo', 'naranja', 'verde', 'azul']
 # como parámetro y utilizar el índice para acceder a
 # los elementos de la lista
 # for i ...
+
+for i in range(len(colores)):
+    print('Posición =', i , 'pertenece a ', colores[i]) 
 
 print("terminamos!")

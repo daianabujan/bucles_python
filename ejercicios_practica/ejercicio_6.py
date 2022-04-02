@@ -20,9 +20,16 @@ inicio = int(input('Ingrese el primer número de la secuencia\n'))
 fin = int(input('Ingrese el último número de la secuencia\n'))
 
 cantidad_numeros_positivos = 0  # Inicializo el contador en 0
+cantidad_numeros_negativos = 0
 
 # for ... in range(....)
-
 # Imprimir el valor de la cantidad de números positivos y negativos
+ 
+for i in range (inicio, fin +1):
+    if i >= 0:
+        cantidad_numeros_positivos += 1
+    else:
+        cantidad_numeros_negativos += 1
 
-print("terminamos!")
+print("Cantidad de números negativos = ", cantidad_numeros_negativos)
+print("Cantidad de números iguales o mayores que 0 = ", cantidad_numeros_positivos)
